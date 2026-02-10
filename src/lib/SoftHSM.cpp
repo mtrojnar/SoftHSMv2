@@ -765,7 +765,8 @@ void SoftHSM::prepareSupportedMechanisms(std::map<std::string, CK_MECHANISM_TYPE
 	t["CKM_SHA512_HMAC"]		= CKM_SHA512_HMAC;
 	t["CKM_RSA_PKCS_KEY_PAIR_GEN"]	= CKM_RSA_PKCS_KEY_PAIR_GEN;
 	t["CKM_RSA_PKCS"]		= CKM_RSA_PKCS;
-	t["CKM_RSA_X_509"]		= CKM_RSA_X_509;
+	if (0) // TODO: check for an environmental variable
+		t["CKM_RSA_X_509"]		= CKM_RSA_X_509;
 #ifndef WITH_FIPS
 	t["CKM_MD5_RSA_PKCS"]		= CKM_MD5_RSA_PKCS;
 #endif
