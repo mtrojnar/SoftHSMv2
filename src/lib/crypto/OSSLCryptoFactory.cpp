@@ -165,6 +165,10 @@ OSSLCryptoFactory::OSSLCryptoFactory()
 			WARNING_MSG("ENGINE_set_default returned %lu\n", ERR_get_error());
 		}
 	}
+	else
+	{
+		ERR_clear_error();
+	}
 #endif
 
 	// Initialise the one-and-only RNG
